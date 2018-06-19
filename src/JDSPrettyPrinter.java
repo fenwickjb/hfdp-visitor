@@ -5,8 +5,14 @@ public class JDSPrettyPrinter extends JDSVisitor {
 	// Work with current node
 	Integer nodeData = (Integer) node.getData();
 	int value = nodeData.intValue();
+	JDSNode parent = node.getParent();
+	String parentHashCode = "NONE";
+	if (parent != null) {
+	    parentHashCode = "" + parent.hashCode();
+	}
 	
 	System.out.println("JDSNode(@" + node.hashCode()
+			   + ") child of (@" + parentHashCode
 			   + ") contains Integer(@" + nodeData.hashCode()
 			   + ") containing (" + value + ")");
 
