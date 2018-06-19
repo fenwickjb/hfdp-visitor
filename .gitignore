@@ -1,0 +1,9 @@
+
+# Java files to ignore
+*.class
+
+# Eclipse files to ignore
+.settings/
+.project
+.classpath
+
